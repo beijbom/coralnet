@@ -17,10 +17,6 @@ from annotations.model_utils import AnnotationAreaUtils
 from labels.models import LabelSet
 from lib.utils import rand_string
 
-# Unfortunate import b/c risk of circular reference, but wasn't sure how to
-# get rid of it.
-from vision_backend.models import Features
-
 
 class SourceManager(models.Manager):
     def get_by_natural_key(self, name):
@@ -547,9 +543,6 @@ class Image(models.Model):
     uploaded_by = models.ForeignKey(
         User, on_delete=models.SET_NULL,
         editable=False, null=True)
-
-    features = models.ForeignKey(
-        'vision_backend.Features', on_delete=models.PROTECT, editable=False)
 
     confirmed = models.BooleanField(default=False)
 
