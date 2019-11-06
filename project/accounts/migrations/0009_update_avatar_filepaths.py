@@ -56,5 +56,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(
-            update_avatar_filepaths_in_db, rollback_avatar_filepaths_in_db),
+            update_avatar_filepaths_in_db, rollback_avatar_filepaths_in_db,
+            elidable=True),
     ]

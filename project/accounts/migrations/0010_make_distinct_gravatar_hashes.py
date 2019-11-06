@@ -42,5 +42,5 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(
-            make_distinct_gravatar_hashes, do_nothing),
+            make_distinct_gravatar_hashes, do_nothing, elidable=True),
     ]

@@ -27,10 +27,13 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('accounts', '0010_make_distinct_gravatar_hashes'),
+        # Depending on 0002 here instead of in 0003 facilitates squashing
+        # migrations 0001-0011.
+        ('accounts', '0002_add_special_users'),
         # Latest contrib.auth migration at time of this migration's creation
         ('auth', '0008_alter_user_username_max_length'),
     ]
 
     operations = [
-        migrations.RunPython(forwards_func, do_nothing),
+        migrations.RunPython(forwards_func, do_nothing, elidable=True),
     ]

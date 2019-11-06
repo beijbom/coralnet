@@ -8,7 +8,9 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0002_add_special_users'),
+        # Depending on 0001 instead of 0002 facilitates squashing migrations
+        # 0001-0011.
+        ('accounts', '0001_initial'),
     ]
 
     operations = [
