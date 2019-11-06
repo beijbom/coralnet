@@ -19,7 +19,7 @@ from lib.utils import rand_string
 
 # Unfortunate import b/c risk of circular reference, but wasn't sure how to
 # get rid of it.
-from vision_backend.models import Classifier, Features, Score
+from vision_backend.models import Features
 
 
 class SourceManager(models.Manager):
@@ -338,12 +338,11 @@ class Source(models.Model):
         """
         returns a list of all robots that have valid metadata
         """
-        return Classifier.objects.filter(source=self, valid=True)\
-            .order_by('-id')
+        return self.classifier_set.filter(valid=True).order_by('-id')
 
     def nbr_images_in_latest_robot(self):
         # NOTE: Here we include also those not valid.
-        robots = Classifier.objects.filter(source=self).order_by('-id')
+        robots = self.classifier_set.order_by('-id')
         if robots.count() > 0:
             return robots[0].nbr_train_images
         else:
