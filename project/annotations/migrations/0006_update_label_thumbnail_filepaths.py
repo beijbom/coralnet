@@ -54,5 +54,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(
-            update_label_thumbnail_filepaths, dont_rollback_filepaths),
+            update_label_thumbnail_filepaths, dont_rollback_filepaths,
+            elidable=True),
     ]

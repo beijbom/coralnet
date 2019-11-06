@@ -63,5 +63,5 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(
-            rename_dupe_image_names, remove_dupe_name_suffixes),
+            rename_dupe_image_names, remove_dupe_name_suffixes, elidable=True),
     ]

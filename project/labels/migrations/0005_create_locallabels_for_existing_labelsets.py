@@ -36,5 +36,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(
-            create_locallabels_for_existing_labelsets, do_nothing),
+            create_locallabels_for_existing_labelsets, do_nothing,
+            elidable=True),
     ]

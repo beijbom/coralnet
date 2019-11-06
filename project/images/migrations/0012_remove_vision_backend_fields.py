@@ -9,7 +9,6 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('annotations', '0008_rename_vision_backend_fields'),
         ('images', '0011_rename_dupe_image_names'),
     ]
     

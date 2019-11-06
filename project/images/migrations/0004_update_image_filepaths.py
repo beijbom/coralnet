@@ -56,5 +56,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(
-            update_image_filepaths_in_db, dont_rollback_filepaths),
+            update_image_filepaths_in_db, dont_rollback_filepaths,
+            elidable=True),
     ]

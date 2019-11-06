@@ -42,7 +42,9 @@ class Migration(migrations.Migration):
         ),
 
         # Copy image.status.annotatedByHuman to new confirmed field
-        migrations.RunPython(copy_confirmed_status, copy_confirmed_status_backwards),
+        migrations.RunPython(
+            copy_confirmed_status, copy_confirmed_status_backwards,
+            elidable=True),
         
         
     ]

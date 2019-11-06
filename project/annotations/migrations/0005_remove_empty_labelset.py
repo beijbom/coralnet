@@ -35,5 +35,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(remove_empty_labelset),
+        migrations.RunPython(remove_empty_labelset, elidable=True),
     ]

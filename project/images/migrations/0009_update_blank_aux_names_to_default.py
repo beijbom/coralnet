@@ -37,5 +37,5 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(
-            set_blank_aux_names_to_default, dont_change_values),
+            set_blank_aux_names_to_default, dont_change_values, elidable=True),
     ]

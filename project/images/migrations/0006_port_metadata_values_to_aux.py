@@ -71,5 +71,5 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(
-            values_to_aux, aux_to_values),
+            values_to_aux, aux_to_values, elidable=True),
     ]

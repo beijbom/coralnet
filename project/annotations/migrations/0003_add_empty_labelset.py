@@ -26,5 +26,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(add_empty_labelset),
+        migrations.RunPython(add_empty_labelset, elidable=True),
     ]

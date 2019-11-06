@@ -10,9 +10,6 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('labels', '0003_labelset'),
-        # Just in case, we'll make sure the label-related models are
-        # completely moved out of the annotations app first.
-        ('annotations', '0016_delete_labelset'),
     ]
 
     operations = [
