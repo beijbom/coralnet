@@ -23,8 +23,7 @@ django-guardian==1.4.9
 # (A currently active, package friendly fork of it; also endorsed by Django)
 # Changelog: https://pillow.readthedocs.io/en/stable/releasenotes/index.html
 #
-# django-andablog, as of 3.1.0, still needs Pillow 4.x instead of >= 5
-Pillow==4.3.0
+Pillow==7.2.0
 
 # Image EXIF reading/writing
 # Could be replaced with Pillow once Pillow is 6.0 or higher, since they
@@ -39,7 +38,7 @@ Markdown>=3.1.1,<4
 # Simple blog.
 # Requires: django, Pillow, six, and Markdown (for blog Markdown support)
 # Changelog: https://github.com/WimpyAnalytics/django-andablog/blob/master/HISTORY.rst
-django-andablog==3.0.0
+django-andablog==3.2.0
 
 # System for generating smaller versions of images.
 # Requires: django, Pillow
